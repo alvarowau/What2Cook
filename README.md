@@ -1,38 +1,135 @@
-# What2Cook
+# 🍳 What2Cook
 
-This template should help get you started developing with Vue 3 in Vite.
+What2Cook es una aplicación web moderna y minimalista desarrollada con Vue 3 y Vite cuyo objetivo es ayudar a los usuarios a decidir qué cocinar utilizando los ingredientes que ya tienen disponibles.
 
-## Recommended IDE Setup
+La aplicación busca optimizar:
+- 🥦 El uso de ingredientes
+- ⏱️ El tiempo de preparación
+- 💸 La reducción del desperdicio de comida
+- 🤔 La toma de decisiones diarias sobre qué cocinar
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Recommended Browser Setup
+# 🚀 Tecnologías utilizadas
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- Vue 3
+- Composition API
+- `<script setup>`
+- Vite
+- Node.js
+- npm
 
-## Customize configuration
+---
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+# 📂 Estructura del proyecto
 
-## Project Setup
+```bash
+What2Cook/
+├── index.html
+├── package.json
+├── vite.config.js
+├── src/
+│   ├── main.js
+│   └── App.vue
+└── public/
+```
 
-```sh
+---
+
+# ⚙️ Requisitos
+
+Antes de ejecutar el proyecto, asegúrate de tener instalado:
+
+- Node.js `v24.15.0` o superior
+- npm
+
+---
+
+# 📦 Instalación
+
+Clona el repositorio:
+
+```bash
+git clone https://github.com/alvarowau/What2Cook.git
+```
+
+Accede al directorio:
+
+```bash
+cd What2Cook
+```
+
+Instala las dependencias:
+
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+---
 
-```sh
+# ▶️ Ejecutar en desarrollo
+
+Inicia el servidor de desarrollo:
+
+```bash
 npm run dev
 ```
 
-### Compile and Minify for Production
+La aplicación estará disponible normalmente en:
 
-```sh
+```bash
+http://localhost:5173
+```
+
+---
+
+# 🏗️ Construcción para producción
+
+Generar build optimizada:
+
+```bash
 npm run build
 ```
+
+Previsualizar la build:
+
+```bash
+npm run preview
+```
+
+---
+
+# 🎯 Objetivos del proyecto
+
+- Crear una experiencia moderna y minimalista
+- Facilitar la elección de recetas
+- Aprovechar ingredientes disponibles
+- Mantener una arquitectura limpia y escalable
+- Aplicar buenas prácticas en Vue 3
+
+---
+
+# 📌 Estado actual
+
+El proyecto se encuentra actualmente en una fase inicial de desarrollo.
+
+La base actual incluye:
+- Configuración de Vue 3 + Vite
+- Estructura mínima funcional
+- Componente raíz inicial
+
+---
+
+# 👨‍💻 Autores
+
+- alvaroWau
+- msanchez8392
+
+GitHub del proyecto:
+https://github.com/alvarowau/What2Cook
+
+---
+
+# 📄 Licencia
+
+Este proyecto está bajo la licencia MIT.
