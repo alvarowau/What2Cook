@@ -1,7 +1,18 @@
-<script setup></script>
+<script setup>
+import NavbarView from './views/NavbarView.vue';
+
+</script>
 
 <template>
-  <h1>Hola Quetal</h1>
+  <NavbarView/>
+  <RouterView/>
 </template>
 
-<style></style>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+</style>
