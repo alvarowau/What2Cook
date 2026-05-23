@@ -2,11 +2,11 @@ import { defineStore } from "pinia";
 import { ref } from "vue";
 
 export const useRecetaStore = defineStore("receta", () => {
-  /* STATE */
+  /* ---------------- STATE ---------------- */
 
   const recetas = ref([]);
 
-  const receta = ref(null);
+  const recetaActual = ref(null);
 
   const cargandoRecetas = ref(false);
 
@@ -14,13 +14,13 @@ export const useRecetaStore = defineStore("receta", () => {
 
   const error = ref(null);
 
-  /* CONFIG */
+  /* ---------------- CONFIG ---------------- */
 
   const API_URL = "https://api.spoonacular.com/recipes";
 
   const API_KEY = import.meta.env.VITE_API_KEY_SPOONC;
 
-  /* ACTIONS */
+  /* ---------------- ACTIONS ---------------- */
 
   async function cargarRecetas() {
     cargandoRecetas.value = true;
@@ -29,16 +29,16 @@ export const useRecetaStore = defineStore("receta", () => {
 
     try {
       const response = await fetch(
-        `${API_URL}/complexSearch?apiKey=${API_KEY}`,
+        `${API_URL}/complexSearch?apiKey=${API_KEY}&language=es`,
       );
 
       if (!response.ok) {
-        throw new Error(`Error ${response.status}`);
+        throw new Error("No se pudieron cargar las recetas");
       }
 
       const data = await response.json();
 
-      recetas.value = data.results || [];
+      recetas.value = data.results ?? [];
     } catch (e) {
       error.value = e.message;
     } finally {
@@ -46,23 +46,34 @@ export const useRecetaStore = defineStore("receta", () => {
     }
   }
 
-  async function cargarRecetaById(id) {
+  async function cargarRecetaPorId(id) {
+    if (!id) {
+      error.value = "El ID de la receta es obligatorio";
+      return;
+    }
+
     cargandoReceta.value = true;
 
     error.value = null;
 
     try {
+      const recetaExistente = recetas.value.find((receta) => receta.id === id);
+
+      if (recetaExistente && recetaActual.value?.id === id) {
+        return;
+      }
+
       const response = await fetch(
-        `${API_URL}/${id}/information?apiKey=${API_KEY}`,
+        `${API_URL}/${id}/information?apiKey=${API_KEY}&language=es`,
       );
 
       if (!response.ok) {
-        throw new Error(`Error ${response.status}`);
+        throw new Error("No se pudo cargar la receta");
       }
 
       const data = await response.json();
 
-      receta.value = data;
+      recetaActual.value = data;
     } catch (e) {
       error.value = e.message;
     } finally {
@@ -70,25 +81,22 @@ export const useRecetaStore = defineStore("receta", () => {
     }
   }
 
-  function limpiarReceta() {
-    receta.value = null;
+  function limpiarRecetaActual() {
+    recetaActual.value = null;
   }
 
   return {
-    /* STATE */
-
     recetas,
-    receta,
+    recetaActual,
 
     cargandoRecetas,
     cargandoReceta,
 
     error,
 
-    /* ACTIONS */
-
     cargarRecetas,
-    cargarRecetaById,
-    limpiarReceta,
+    cargarRecetaPorId,
+
+    limpiarRecetaActual,
   };
 });

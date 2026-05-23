@@ -1,84 +1,152 @@
 <script setup>
+import { computed } from "vue";
+
 import RecetaStat from "@/components/receta/RecetaStat.vue";
 import AppBadge from "@/components/ui/AppBadge.vue";
 
-defineProps({
+const props = defineProps({
   receta: {
     type: Object,
     required: true,
   },
 });
+
+/*
+  Convertimos los badges en datos.
+
+  Así evitamos repetir:
+  <AppBadge v-if="..." />
+
+  Esto hace el componente:
+  - más limpio
+  - más escalable
+  - más mantenible
+*/
+
+const badges = computed(() => [
+  {
+    visible: props.receta.glutenFree,
+    text: "Gluten Free",
+    variant: "blue",
+  },
+
+  {
+    visible: props.receta.dairyFree,
+    text: "Dairy Free",
+    variant: "purple",
+  },
+
+  {
+    visible: props.receta.vegetarian,
+    text: "Vegetarian",
+    variant: "green",
+  },
+
+  {
+    visible: props.receta.vegan,
+    text: "Vegan",
+    variant: "orange",
+  },
+]);
+
+/*
+  Igual que con badges:
+  convertimos estadísticas en estructura dinámica.
+
+  Esto escala muchísimo mejor.
+*/
+
+const stats = computed(() => [
+  {
+    icon: "⏱",
+    value: props.receta.readyInMinutes,
+    label: "Tiempo",
+    variant: "orange",
+  },
+
+  {
+    icon: "👥",
+    value: props.receta.servings,
+    label: "Raciones",
+    variant: "blue",
+  },
+
+  {
+    icon: "❤️",
+    value: props.receta.aggregateLikes,
+    label: "Likes",
+    variant: "red",
+  },
+]);
 </script>
+
 <template>
   <div class="hero">
+
     <!-- IMAGE SIDE -->
 
     <div class="hero-image-container">
-      <img :src="receta.image" :alt="receta.title" class="hero-image" />
+
+      <img
+        :src="receta.image"
+        :alt="receta.title"
+        class="hero-image"
+      />
 
       <div class="image-overlay"></div>
+
     </div>
 
     <!-- CONTENT SIDE -->
 
     <div class="hero-content">
+
       <!-- TOP -->
 
       <div class="hero-top">
+
+        <!-- BADGES -->
+
         <div class="badges">
-          <AppBadge
-            v-if="receta.glutenFree"
-            text="Gluten Free"
-            variant="blue"
-          />
 
           <AppBadge
-            v-if="receta.dairyFree"
-            text="Dairy Free"
-            variant="purple"
+            v-for="badge in badges"
+            :key="badge.text"
+            v-show="badge.visible"
+            :text="badge.text"
+            :variant="badge.variant"
           />
 
-          <AppBadge
-            v-if="receta.vegetarian"
-            text="Vegetarian"
-            variant="green"
-          />
-
-          <AppBadge v-if="receta.vegan" text="Vegan" variant="orange" />
         </div>
+
+        <!-- TITLE -->
 
         <h1 class="titulo">
           {{ receta.title }}
         </h1>
+
       </div>
 
       <!-- STATS -->
 
       <div class="stats">
-        <RecetaStat
-          icon="⏱"
-          :value="receta.readyInMinutes"
-          label="Tiempo"
-          variant="orange"
-        />
 
         <RecetaStat
-          icon="👥"
-          :value="receta.servings"
-          label="Raciones"
-          variant="blue"
+          v-for="stat in stats"
+          :key="stat.label"
+          :icon="stat.icon"
+          :value="stat.value"
+          :label="stat.label"
+          :variant="stat.variant"
         />
 
-        <RecetaStat
-          icon="❤️"
-          :value="receta.aggregateLikes"
-          label="Likes"
-          variant="red"
-        />
       </div>
+
     </div>
+
   </div>
 </template>
+
 <style scoped>
 .hero {
   display: grid;
@@ -93,12 +161,17 @@ defineProps({
 
   overflow: hidden;
 
-  background: linear-gradient(145deg, #fffaf5, #fff6ee);
+  background:
+    linear-gradient(
+      145deg,
+      #fffaf5,
+      #fff6ee
+    );
 
   border: 1px solid #f1dfc9;
 
   box-shadow:
-  0 25px 70px rgba(180, 83, 9, 0.08);
+    0 25px 70px rgba(180, 83, 9, 0.08);
 
   position: relative;
 
@@ -136,11 +209,12 @@ defineProps({
 
   inset: 0;
 
-  background: linear-gradient(
-    to top,
-    rgba(120, 53, 15, 0.35),
-    rgba(15, 23, 42, 0.05)
-  );
+  background:
+    linear-gradient(
+      to top,
+      rgba(120, 53, 15, 0.35),
+      rgba(15, 23, 42, 0.05)
+    );
 }
 
 /* CONTENT */
@@ -167,13 +241,19 @@ defineProps({
   position: absolute;
 
   width: 400px;
+
   height: 400px;
 
   border-radius: 50%;
 
-  background: radial-gradient(rgba(249, 115, 22, 0.10), transparent);
+  background:
+    radial-gradient(
+      rgba(249, 115, 22, 0.10),
+      transparent
+    );
 
   top: -180px;
+
   right: -120px;
 }
 

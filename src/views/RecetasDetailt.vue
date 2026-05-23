@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, onUnmounted } from 'vue';
+import { watch, onUnmounted } from 'vue';
 import { useRoute } from 'vue-router';
 
 import { useRecetaStore } from '@/stores/RecetaStore';
@@ -12,18 +12,37 @@ const route = useRoute();
 
 const recetaStore = useRecetaStore();
 
-onMounted(async () => {
+/*
+  Observamos el parámetro de la ruta.
 
-  await recetaStore.cargarRecetaById(
-    route.params.id
-  );
+  Esto es mejor que usar únicamente onMounted,
+  porque si cambia el ID en la URL,
+  el componente reaccionará automáticamente.
+*/
 
-});
+watch(
+  () => route.params.id,
+
+  async (nuevoId) => {
+    if (!nuevoId) {
+      return;
+    }
+
+    await recetaStore.cargarRecetaPorId(nuevoId);
+  },
+
+  {
+    immediate: true,
+  }
+);
+
+/*
+  Limpiamos el estado cuando salimos
+  de la página del detalle.
+*/
 
 onUnmounted(() => {
-
-  recetaStore.limpiarReceta();
-
+  recetaStore.limpiarRecetaActual();
 });
 </script>
 
@@ -55,14 +74,14 @@ onUnmounted(() => {
     <!-- DETAIL -->
 
     <div
-      v-else-if="recetaStore.receta"
+      v-else-if="recetaStore.recetaActual"
       class="detalle-container"
     >
 
       <!-- HERO -->
 
       <HeroRecetaDetail
-        :receta="recetaStore.receta"
+        :receta="recetaStore.recetaActual"
       />
 
       <!-- CONTENT -->
@@ -73,7 +92,7 @@ onUnmounted(() => {
 
         <RecetaIngredientes
           :ingredientes="
-            recetaStore.receta.extendedIngredients
+            recetaStore.recetaActual.extendedIngredients ?? []
           "
         />
 
@@ -81,7 +100,7 @@ onUnmounted(() => {
 
         <RecetaPasos
           :pasos="
-            recetaStore.receta.analyzedInstructions[0]?.steps || []
+            recetaStore.recetaActual.analyzedInstructions?.[0]?.steps ?? []
           "
         />
 

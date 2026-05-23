@@ -5,15 +5,19 @@
 
     <nav class="navbar">
         <div class="navbar-logo">
+            <RouterLink to="/">
             <span>
                <img src="@/assets/logo.svg" alt="What2Cook Logo">
             </span>
+            </RouterLink >
         </div>
         <input type="text"
         placeholder="Busca Recetas">
         <ul>
             <li>
+                <RouterLink to="/">
                 <a href="#">Recetas</a>
+                </RouterLink>
                 </li>
             <li>
                 <a href="#">Mi Despensa</a>
