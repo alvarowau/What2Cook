@@ -13,6 +13,7 @@ export const useRecetaStore = defineStore("receta", () => {
   const cargandoReceta = ref(false);
 
   const error = ref(null);
+  const recetasPorId = ref({});
 
   /* ---------------- CONFIG ---------------- */
 
@@ -50,40 +51,45 @@ export const useRecetaStore = defineStore("receta", () => {
     }
   }
 
-  async function cargarRecetaPorId(id) {
-    if (!id) {
-      error.value = "El ID de la receta es obligatorio";
-      return;
-    }
+ async function cargarRecetaPorId(id) {
+   if (!id) {
+     error.value = "El ID de la receta es obligatorio";
+     return;
+   }
 
-    cargandoReceta.value = true;
+   error.value = null;
 
-    error.value = null;
+   const recetaCacheada = recetasPorId.value[id];
 
-    try {
-      const recetaExistente = recetas.value.find((receta) => receta.id === id);
+   if (recetaCacheada) {
+     recetaActual.value = recetaCacheada;
+     console.log("la receta estaba cacheada");
+     
+     return;
+   }
 
-      if (recetaExistente && recetaActual.value?.id === id) {
-        return;
-      }
+   cargandoReceta.value = true;
 
-      const response = await fetch(
-        `${API_URL}/${id}/information?apiKey=${API_KEY}&language=es`,
-      );
+   try {
+     const response = await fetch(
+       `${API_URL}/${id}/information?apiKey=${API_KEY}&language=es`,
+     );
 
-      if (!response.ok) {
-        throw new Error("No se pudo cargar la receta");
-      }
+     if (!response.ok) {
+       throw new Error("No se pudo cargar la receta");
+     }
 
-      const data = await response.json();
+     const data = await response.json();
 
-      recetaActual.value = data;
-    } catch (e) {
-      error.value = e.message;
-    } finally {
-      cargandoReceta.value = false;
-    }
-  }
+     recetasPorId.value[id] = data;
+
+     recetaActual.value = data;
+   } catch (e) {
+     error.value = e instanceof Error ? e.message : "Error desconocido";
+   } finally {
+     cargandoReceta.value = false;
+   }
+ }
 
   function limpiarRecetaActual() {
     recetaActual.value = null;
