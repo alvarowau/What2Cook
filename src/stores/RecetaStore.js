@@ -23,6 +23,10 @@ export const useRecetaStore = defineStore("receta", () => {
   /* ---------------- ACTIONS ---------------- */
 
   async function cargarRecetas() {
+    if (recetas.value.length > 0 || cargandoRecetas.value) {
+      return;
+    }
+
     cargandoRecetas.value = true;
 
     error.value = null;

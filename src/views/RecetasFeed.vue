@@ -6,7 +6,10 @@ import { useRecetaStore } from "@/stores/RecetaStore";
 const recetaStore = useRecetaStore();
 
 onMounted(async () => {
-  await recetaStore.cargarRecetas();
+  if (recetaStore.recetas) {
+    await recetaStore.cargarRecetas();
+  }
+
 });
 </script>
 
