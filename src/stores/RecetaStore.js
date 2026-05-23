@@ -29,7 +29,7 @@ export const useRecetaStore = defineStore("receta", () => {
 
     try {
       const response = await fetch(
-        `${API_URL}/complexSearch?apiKey=${API_KEY}&language=es`,
+        `${API_URL}/complexSearch?apiKey=${API_KEY}&number=12`,
       );
 
       if (!response.ok) {
