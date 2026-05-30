@@ -25,13 +25,48 @@ La aplicación busca optimizar:
 
 ```bash
 What2Cook/
-├── index.html
-├── package.json
-├── vite.config.js
-├── src/
-│   ├── main.js
-│   └── App.vue
-└── public/
+──  index.html
+├──  jsconfig.json
+├──  LICENSE
+├──  node_modules
+│   ├──  @vitejs
+│   │   └──  plugin-vue -> ../.pnpm/@vitejs+plugin-vue@6.0.7_vite@8.0.14_yaml@2.9.0__vue@3.5.35/node_modules/@vitejs/plugin-vue
+│   ├──  pinia -> .pnpm/pinia@3.0.4_vue@3.5.35/node_modules/pinia
+│   ├──  vite -> .pnpm/vite@8.0.14_yaml@2.9.0/node_modules/vite
+│   ├──  vite-plugin-vue-devtools -> .pnpm/vite-plugin-vue-devtools@8.1.2_vite@8.0.14_yaml@2.9.0__vue@3.5.35/node_modules/vite-plugin-vue-devtools
+│   ├──  vue -> .pnpm/vue@3.5.35/node_modules/vue
+│   └──  vue-router -> .pnpm/vue-router@5.1.0_@vue+compiler-sfc@3.5.35_pinia@3.0.4_vue@3.5.35__vite@8.0.14_yaml@2.9.0__vue@3.5.35/node_modules/vue-router
+├──  package-lock.json
+├──  package.json
+├──  pnpm-lock.yaml
+├── 󰂺 README.md
+├── 󰣞 src
+│   ├── 󰡄 App.vue
+│   ├──  assets
+│   │   └── 󰕙 logo.svg
+│   ├──  components
+│   │   ├──  receta
+│   │   │   ├── 󰡄 HeroRecetaDetail.vue
+│   │   │   ├── 󰡄 RecetaIngredientes.vue
+│   │   │   ├── 󰡄 RecetaPasos.vue
+│   │   │   └── 󰡄 RecetaStat.vue
+│   │   └──  ui
+│   │       └── 󰡄 AppBadge.vue
+│   ├──  main.js
+│   ├──  router
+│   │   └──  index.js
+│   ├──  stores
+│   │   ├──  recetas-detalle.json
+│   │   ├──  recetas.json
+│   │   ├──  RecetaStore-pruebalocal.js
+│   │   └──  RecetaStore.js
+│   └──  views
+│       ├── 󰡄 DespensaView.vue
+│       ├── 󰡄 NavbarView.vue
+│       ├── 󰡄 RecetasDetailt.vue
+│       └── 󰡄 RecetasFeed.vue
+└──  vite.config.js
+
 ```
 
 ---
