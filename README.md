@@ -30,7 +30,7 @@ What2Cook/
 ├── LICENSE
 ├── node_modules
 │   ├── @vitejs
-│   │   └──  plugin-vue -> ../.pnpm/@vitejs+plugin-vue@6.0.7_vite@8.0.14_yaml@2.9.0__vue@3.5.35/node_modules/@vitejs/plugin-vue
+│   │   └── plugin-vue -> ../.pnpm/@vitejs+plugin-vue@6.0.7_vite@8.0.14_yaml@2.9.0__vue@3.5.35/node_modules/@vitejs/plugin-vue
 │   ├── pinia -> .pnpm/pinia@3.0.4_vue@3.5.35/node_modules/pinia
 │   ├── vite -> .pnpm/vite@8.0.14_yaml@2.9.0/node_modules/vite
 │   ├── vite-plugin-vue-devtools -> .pnpm/vite-plugin-vue-devtools@8.1.2_vite@8.0.14_yaml@2.9.0__vue@3.5.35/node_modules/vite-plugin-vue-devtools
