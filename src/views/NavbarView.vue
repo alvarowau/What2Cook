@@ -20,7 +20,9 @@
                 </RouterLink>
                 </li>
             <li>
+                <RouterLink to="/despensa">
                 <a href="#">Mi Despensa</a>
+                </RouterLink>
             </li>
 
         </ul>

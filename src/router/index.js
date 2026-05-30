@@ -1,5 +1,6 @@
 import RecetasDetailt from "@/views/RecetasDetailt.vue";
 import RecetasFeed from "@/views/RecetasFeed.vue";
+import DespensaView from "@/views/DespensaView.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 
@@ -11,8 +12,12 @@ const routes = [
   },
   {
     path: "/recetas/:id",
-    component: RecetasDetailt
-  }
+    component: RecetasDetailt,
+  },
+  {
+    path: "/despensa",
+    component: DespensaView,
+  },
 ];
 
 const router = createRouter({
