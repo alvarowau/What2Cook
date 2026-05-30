@@ -194,7 +194,7 @@
     "vegan": false,
     "extendedIngredients": [
       { "id": 1, "original": "Lechuga romana" },
-      { "id": 2, "original": "Parmesano" },
+      { "id": 2, "original": "Queso Parmesano" },
       { "id": 3, "original": "Picatostes" }
     ],
     "analyzedInstructions": [
@@ -247,7 +247,7 @@
     "extendedIngredients": [
       { "id": 1, "original": "Arroz arborio" },
       { "id": 2, "original": "Champiñones" },
-      { "id": 3, "original": "Parmesano" }
+      { "id": 3, "original": "Queso Parmesano" }
     ],
     "analyzedInstructions": [
       {
@@ -350,7 +350,7 @@
     "vegan": false,
     "extendedIngredients": [
       { "id": 1, "original": "Masa para pizza" },
-      { "id": 2, "original": "Mozzarella" },
+      { "id": 2, "original": "Queso Mozzarella" },
       { "id": 3, "original": "Tomate" }
     ],
     "analyzedInstructions": [

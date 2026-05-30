@@ -1,8 +1,8 @@
 import { defineStore } from "pinia";
 import { ref } from "vue";
 
-import recetasFeed from "./recetas.json";
 import recetasDetalle from "./recetas-detalle.json";
+import recetasFeed from "./recetas.json";
 
 export const useRecetaStore = defineStore("receta", () => {
   /* ---------------- STATE ---------------- */
@@ -14,6 +14,7 @@ export const useRecetaStore = defineStore("receta", () => {
   const cargandoRecetas = ref(false);
 
   const cargandoReceta = ref(false);
+  const resultadosDespensa = ref([]);
 
   const error = ref(null);
 
@@ -37,6 +38,35 @@ export const useRecetaStore = defineStore("receta", () => {
     } finally {
       cargandoRecetas.value = false;
     }
+  }
+
+  async function buscarPorIngredientes(ingredientes) {
+    limpiarRecetaActual();
+    cargandoRecetas.value = true;
+
+    error.value = null;
+
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 300));
+
+      resultadosDespensa.value = recetasDetalle.filter((receta) =>
+        receta.extendedIngredients.some((ingredienteReceta) =>
+          ingredientes.some((ingredienteSeleccionado) =>
+            ingredienteReceta.original
+              .toLowerCase()
+              .includes(ingredienteSeleccionado.toLowerCase()),
+          ),
+        ),
+      );
+    } catch {
+      error.value = "No se pudieron buscar recetas";
+    } finally {
+      cargandoRecetas.value = false;
+    }
+  }
+
+  function limpiarResultadosDespensa() {
+    resultadosDespensa.value = [];
   }
 
   async function cargarRecetaPorId(id) {
@@ -72,6 +102,7 @@ export const useRecetaStore = defineStore("receta", () => {
 
   return {
     recetas,
+    resultadosDespensa,
     recetaActual,
 
     cargandoRecetas,
@@ -80,6 +111,7 @@ export const useRecetaStore = defineStore("receta", () => {
     error,
 
     cargarRecetas,
+    buscarPorIngredientes,
     cargarRecetaPorId,
 
     limpiarRecetaActual,
