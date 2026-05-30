@@ -1,0 +1,626 @@
+[
+  {
+    "id": 716429,
+    "title": "Pasta con ajo, coliflor y pan rallado",
+    "image": "https://img.spoonacular.com/recipes/716429-556x370.jpg",
+    "readyInMinutes": 45,
+    "servings": 2,
+    "aggregateLikes": 209,
+    "glutenFree": false,
+    "dairyFree": false,
+    "vegetarian": true,
+    "vegan": false,
+    "extendedIngredients": [
+      { "id": 1, "original": "200g de pasta" },
+      { "id": 2, "original": "3 dientes de ajo" },
+      { "id": 3, "original": "1 coliflor" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Cocer la pasta." },
+          { "number": 2, "step": "Saltear el ajo." },
+          { "number": 3, "step": "Mezclar y servir." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 715538,
+    "title": "Pasta con cerdo estilo bruschetta",
+    "image": "https://img.spoonacular.com/recipes/715538-556x370.jpg",
+    "readyInMinutes": 35,
+    "servings": 4,
+    "aggregateLikes": 145,
+    "glutenFree": false,
+    "dairyFree": true,
+    "vegetarian": false,
+    "vegan": false,
+    "extendedIngredients": [
+      { "id": 1, "original": "300g de pasta" },
+      { "id": 2, "original": "250g de cerdo" },
+      { "id": 3, "original": "Tomates cherry" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Preparar la carne." },
+          { "number": 2, "step": "Cocer la pasta." },
+          { "number": 3, "step": "Servir caliente." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 716627,
+    "title": "Arroz pilaf casero",
+    "image": "https://img.spoonacular.com/recipes/716627-556x370.jpg",
+    "readyInMinutes": 30,
+    "servings": 4,
+    "aggregateLikes": 87,
+    "glutenFree": true,
+    "dairyFree": true,
+    "vegetarian": true,
+    "vegan": true,
+    "extendedIngredients": [
+      { "id": 1, "original": "250g de arroz" },
+      { "id": 2, "original": "Caldo vegetal" },
+      { "id": 3, "original": "Cebolla" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Sofreír la cebolla." },
+          { "number": 2, "step": "Añadir arroz." },
+          { "number": 3, "step": "Cocinar con caldo." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 715497,
+    "title": "Batido de plátano y frutos rojos",
+    "image": "https://img.spoonacular.com/recipes/715497-556x370.jpg",
+    "readyInMinutes": 10,
+    "servings": 2,
+    "aggregateLikes": 311,
+    "glutenFree": true,
+    "dairyFree": false,
+    "vegetarian": true,
+    "vegan": false,
+    "extendedIngredients": [
+      { "id": 1, "original": "1 plátano" },
+      { "id": 2, "original": "Frutos rojos" },
+      { "id": 3, "original": "Leche" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Añadir ingredientes a la batidora." },
+          { "number": 2, "step": "Triturar." },
+          { "number": 3, "step": "Servir frío." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 644387,
+    "title": "Patatas asadas al ajo",
+    "image": "https://img.spoonacular.com/recipes/644387-556x370.jpg",
+    "readyInMinutes": 40,
+    "servings": 4,
+    "aggregateLikes": 420,
+    "glutenFree": true,
+    "dairyFree": true,
+    "vegetarian": true,
+    "vegan": true,
+    "extendedIngredients": [
+      { "id": 1, "original": "Patatas" },
+      { "id": 2, "original": "Ajo" },
+      { "id": 3, "original": "Romero" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Cortar las patatas." },
+          { "number": 2, "step": "Condimentar." },
+          { "number": 3, "step": "Hornear 35 minutos." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 716406,
+    "title": "Crema de espárragos y guisantes",
+    "image": "https://img.spoonacular.com/recipes/716406-556x370.jpg",
+    "readyInMinutes": 25,
+    "servings": 4,
+    "aggregateLikes": 132,
+    "glutenFree": true,
+    "dairyFree": true,
+    "vegetarian": true,
+    "vegan": true,
+    "extendedIngredients": [
+      { "id": 1, "original": "Espárragos" },
+      { "id": 2, "original": "Guisantes" },
+      { "id": 3, "original": "Caldo vegetal" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Cocer verduras." },
+          { "number": 2, "step": "Triturar." },
+          { "number": 3, "step": "Servir." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 715769,
+    "title": "Pasta Alfredo con pollo",
+    "image": "https://img.spoonacular.com/recipes/715769-556x370.jpg",
+    "readyInMinutes": 38,
+    "servings": 4,
+    "aggregateLikes": 555,
+    "glutenFree": false,
+    "dairyFree": false,
+    "vegetarian": false,
+    "vegan": false,
+    "extendedIngredients": [
+      { "id": 1, "original": "Pechuga de pollo" },
+      { "id": 2, "original": "Pasta" },
+      { "id": 3, "original": "Salsa Alfredo" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Cocinar pollo." },
+          { "number": 2, "step": "Preparar pasta." },
+          { "number": 3, "step": "Mezclar." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 782585,
+    "title": "Ensalada César clásica",
+    "image": "https://img.spoonacular.com/recipes/782585-556x370.jpg",
+    "readyInMinutes": 15,
+    "servings": 2,
+    "aggregateLikes": 180,
+    "glutenFree": false,
+    "dairyFree": false,
+    "vegetarian": true,
+    "vegan": false,
+    "extendedIngredients": [
+      { "id": 1, "original": "Lechuga romana" },
+      { "id": 2, "original": "Parmesano" },
+      { "id": 3, "original": "Picatostes" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Lavar lechuga." },
+          { "number": 2, "step": "Añadir ingredientes." },
+          { "number": 3, "step": "Aliñar." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 716195,
+    "title": "Sopa de tomate y albahaca",
+    "image": "https://img.spoonacular.com/recipes/716195-556x370.jpg",
+    "readyInMinutes": 30,
+    "servings": 4,
+    "aggregateLikes": 95,
+    "glutenFree": true,
+    "dairyFree": true,
+    "vegetarian": true,
+    "vegan": true,
+    "extendedIngredients": [
+      { "id": 1, "original": "Tomates" },
+      { "id": 2, "original": "Albahaca" },
+      { "id": 3, "original": "Cebolla" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Cocer tomates." },
+          { "number": 2, "step": "Añadir albahaca." },
+          { "number": 3, "step": "Triturar." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 716268,
+    "title": "Risotto cremoso de champiñones",
+    "image": "https://img.spoonacular.com/recipes/716268-556x370.jpg",
+    "readyInMinutes": 42,
+    "servings": 4,
+    "aggregateLikes": 370,
+    "glutenFree": true,
+    "dairyFree": false,
+    "vegetarian": true,
+    "vegan": false,
+    "extendedIngredients": [
+      { "id": 1, "original": "Arroz arborio" },
+      { "id": 2, "original": "Champiñones" },
+      { "id": 3, "original": "Parmesano" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Saltear champiñones." },
+          { "number": 2, "step": "Cocinar arroz." },
+          { "number": 3, "step": "Añadir queso." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 715594,
+    "title": "Salmón a la plancha con limón",
+    "image": "https://img.spoonacular.com/recipes/715594-556x370.jpg",
+    "readyInMinutes": 25,
+    "servings": 2,
+    "aggregateLikes": 284,
+    "glutenFree": true,
+    "dairyFree": true,
+    "vegetarian": false,
+    "vegan": false,
+    "extendedIngredients": [
+      { "id": 1, "original": "2 lomos de salmón" },
+      { "id": 2, "original": "1 limón" },
+      { "id": 3, "original": "Aceite de oliva" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Sazonar el salmón." },
+          { "number": 2, "step": "Cocinar a la plancha." },
+          { "number": 3, "step": "Servir con limón." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 641803,
+    "title": "Galletas con pepitas de chocolate",
+    "image": "https://img.spoonacular.com/recipes/641803-556x370.jpg",
+    "readyInMinutes": 35,
+    "servings": 8,
+    "aggregateLikes": 612,
+    "glutenFree": false,
+    "dairyFree": false,
+    "vegetarian": true,
+    "vegan": false,
+    "extendedIngredients": [
+      { "id": 1, "original": "Harina" },
+      { "id": 2, "original": "Mantequilla" },
+      { "id": 3, "original": "Pepitas de chocolate" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Preparar la masa." },
+          { "number": 2, "step": "Añadir el chocolate." },
+          { "number": 3, "step": "Hornear 15 minutos." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 716300,
+    "title": "Salteado de verduras",
+    "image": "https://img.spoonacular.com/recipes/716300-556x370.jpg",
+    "readyInMinutes": 20,
+    "servings": 4,
+    "aggregateLikes": 175,
+    "glutenFree": true,
+    "dairyFree": true,
+    "vegetarian": true,
+    "vegan": true,
+    "extendedIngredients": [
+      { "id": 1, "original": "Brócoli" },
+      { "id": 2, "original": "Zanahoria" },
+      { "id": 3, "original": "Pimiento rojo" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Cortar las verduras." },
+          { "number": 2, "step": "Saltear a fuego alto." },
+          { "number": 3, "step": "Servir caliente." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 715415,
+    "title": "Pizza margarita casera",
+    "image": "https://img.spoonacular.com/recipes/715415-556x370.jpg",
+    "readyInMinutes": 50,
+    "servings": 4,
+    "aggregateLikes": 723,
+    "glutenFree": false,
+    "dairyFree": false,
+    "vegetarian": true,
+    "vegan": false,
+    "extendedIngredients": [
+      { "id": 1, "original": "Masa para pizza" },
+      { "id": 2, "original": "Mozzarella" },
+      { "id": 3, "original": "Tomate" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Extender la masa." },
+          { "number": 2, "step": "Añadir ingredientes." },
+          { "number": 3, "step": "Hornear 20 minutos." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 716276,
+    "title": "Tacos picantes de gambas",
+    "image": "https://img.spoonacular.com/recipes/716276-556x370.jpg",
+    "readyInMinutes": 30,
+    "servings": 3,
+    "aggregateLikes": 341,
+    "glutenFree": false,
+    "dairyFree": true,
+    "vegetarian": false,
+    "vegan": false,
+    "extendedIngredients": [
+      { "id": 1, "original": "Gambas" },
+      { "id": 2, "original": "Tortillas" },
+      { "id": 3, "original": "Salsa picante" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Cocinar las gambas." },
+          { "number": 2, "step": "Calentar tortillas." },
+          { "number": 3, "step": "Montar los tacos." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 716291,
+    "title": "Ternera Stroganoff",
+    "image": "https://imag.bonviveur.com/ternera-strogonoff-recien-hecha.jpg",
+    "readyInMinutes": 45,
+    "servings": 4,
+    "aggregateLikes": 412,
+    "glutenFree": false,
+    "dairyFree": false,
+    "vegetarian": false,
+    "vegan": false,
+    "extendedIngredients": [
+      { "id": 1, "original": "Ternera" },
+      { "id": 2, "original": "Champiñones" },
+      { "id": 3, "original": "Nata" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Dorar la carne." },
+          { "number": 2, "step": "Añadir salsa." },
+          { "number": 3, "step": "Cocinar 20 minutos." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 716401,
+    "title": "Ensalada griega",
+    "image": "https://img.spoonacular.com/recipes/716401-556x370.jpg",
+    "readyInMinutes": 15,
+    "servings": 2,
+    "aggregateLikes": 168,
+    "glutenFree": true,
+    "dairyFree": false,
+    "vegetarian": true,
+    "vegan": false,
+    "extendedIngredients": [
+      { "id": 1, "original": "Tomate" },
+      { "id": 2, "original": "Pepino" },
+      { "id": 3, "original": "Queso feta" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Trocear verduras." },
+          { "number": 2, "step": "Añadir queso." },
+          { "number": 3, "step": "Aliñar y servir." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 716233,
+    "title": "Pollo al curry",
+    "image": "https://img.spoonacular.com/recipes/716233-556x370.jpg",
+    "readyInMinutes": 40,
+    "servings": 4,
+    "aggregateLikes": 503,
+    "glutenFree": true,
+    "dairyFree": true,
+    "vegetarian": false,
+    "vegan": false,
+    "extendedIngredients": [
+      { "id": 1, "original": "Pollo" },
+      { "id": 2, "original": "Leche de coco" },
+      { "id": 3, "original": "Curry" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Dorar el pollo." },
+          { "number": 2, "step": "Añadir salsa curry." },
+          { "number": 3, "step": "Cocinar lentamente." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 716312,
+    "title": "Tostada de aguacate",
+    "image": "https://img.spoonacular.com/recipes/716312-556x370.jpg",
+    "readyInMinutes": 10,
+    "servings": 1,
+    "aggregateLikes": 215,
+    "glutenFree": false,
+    "dairyFree": true,
+    "vegetarian": true,
+    "vegan": true,
+    "extendedIngredients": [
+      { "id": 1, "original": "Pan tostado" },
+      { "id": 2, "original": "Aguacate" },
+      { "id": 3, "original": "Sal y pimienta" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Tostar el pan." },
+          { "number": 2, "step": "Machacar el aguacate." },
+          { "number": 3, "step": "Montar y servir." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 716455,
+    "title": "Tortitas con sirope de arce",
+    "image": "https://img.spoonacular.com/recipes/716455-556x370.jpg",
+    "readyInMinutes": 25,
+    "servings": 4,
+    "aggregateLikes": 448,
+    "glutenFree": false,
+    "dairyFree": false,
+    "vegetarian": true,
+    "vegan": false,
+    "extendedIngredients": [
+      { "id": 1, "original": "Harina" },
+      { "id": 2, "original": "Huevos" },
+      { "id": 3, "original": "Sirope de arce" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Preparar la masa." },
+          { "number": 2, "step": "Cocinar las tortitas." },
+          { "number": 3, "step": "Añadir sirope." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 716477,
+    "title": "Hamburguesa deluxe de ternera",
+    "image": "https://www.unileverfoodsolutions.es/dam/global-ufs/mcos/SPAIN/calcmenu/recipes/ES-recipes/general/hamburguesa-de-ternera-con-aguacate/main-header.jpg",
+    "readyInMinutes": 35,
+    "servings": 2,
+    "aggregateLikes": 689,
+    "glutenFree": false,
+    "dairyFree": false,
+    "vegetarian": false,
+    "vegan": false,
+    "extendedIngredients": [
+      { "id": 1, "original": "Carne de ternera" },
+      { "id": 2, "original": "Pan de hamburguesa" },
+      { "id": 3, "original": "Queso cheddar" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Preparar la carne." },
+          { "number": 2, "step": "Cocinar a la plancha." },
+          { "number": 3, "step": "Montar la hamburguesa." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 716499,
+    "title": "Bol de pollo teriyaki",
+    "image": "https://imag.bonviveur.com/pollo-en-salsa-teriyaki.jpg",
+    "readyInMinutes": 30,
+    "servings": 3,
+    "aggregateLikes": 327,
+    "glutenFree": false,
+    "dairyFree": true,
+    "vegetarian": false,
+    "vegan": false,
+    "extendedIngredients": [
+      { "id": 1, "original": "Pollo" },
+      { "id": 2, "original": "Arroz" },
+      { "id": 3, "original": "Salsa teriyaki" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Cocinar el arroz." },
+          { "number": 2, "step": "Preparar el pollo." },
+          { "number": 3, "step": "Servir en bol." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 716511,
+    "title": "Tarta de queso y fresas",
+    "image": "https://img.spoonacular.com/recipes/716511-556x370.jpg",
+    "readyInMinutes": 60,
+    "servings": 8,
+    "aggregateLikes": 792,
+    "glutenFree": false,
+    "dairyFree": false,
+    "vegetarian": true,
+    "vegan": false,
+    "extendedIngredients": [
+      { "id": 1, "original": "Queso crema" },
+      { "id": 2, "original": "Fresas" },
+      { "id": 3, "original": "Galletas" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Preparar la base." },
+          { "number": 2, "step": "Hornear la tarta." },
+          { "number": 3, "step": "Decorar con fresas." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 716533,
+    "title": "Cuscús mediterráneo",
+    "image": "https://s1.abcstatics.com/abc/www/multimedia/gurme/2026/04/24/2-RAS6hTJ5DS4hqJ6IjX6vcHN-1200x840@diario_abc.jpg",
+    "readyInMinutes": 25,
+    "servings": 4,
+    "aggregateLikes": 201,
+    "glutenFree": false,
+    "dairyFree": true,
+    "vegetarian": true,
+    "vegan": true,
+    "extendedIngredients": [
+      { "id": 1, "original": "Cuscús" },
+      { "id": 2, "original": "Tomates secos" },
+      { "id": 3, "original": "Aceitunas" }
+    ],
+    "analyzedInstructions": [
+      {
+        "steps": [
+          { "number": 1, "step": "Hidratar el cuscús." },
+          { "number": 2, "step": "Añadir verduras." },
+          { "number": 3, "step": "Mezclar y servir." }
+        ]
+      }
+    ]
+  }
+]

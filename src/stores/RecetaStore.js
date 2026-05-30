@@ -1,6 +1,9 @@
 import { defineStore } from "pinia";
 import { ref } from "vue";
 
+import recetasFeed from "./recetas.json";
+import recetasDetalle from "./recetas-detalle.json";
+
 export const useRecetaStore = defineStore("receta", () => {
   /* ---------------- STATE ---------------- */
 
@@ -13,13 +16,6 @@ export const useRecetaStore = defineStore("receta", () => {
   const cargandoReceta = ref(false);
 
   const error = ref(null);
-  const recetasPorId = ref({});
-
-  /* ---------------- CONFIG ---------------- */
-
-  const API_URL = "https://api.spoonacular.com/recipes";
-
-  const API_KEY = import.meta.env.VITE_API_KEY_SPOONC;
 
   /* ---------------- ACTIONS ---------------- */
 
@@ -33,63 +29,42 @@ export const useRecetaStore = defineStore("receta", () => {
     error.value = null;
 
     try {
-      const response = await fetch(
-        `${API_URL}/complexSearch?apiKey=${API_KEY}&number=12`,
-      );
+      await new Promise((resolve) => setTimeout(resolve, 500));
 
-      if (!response.ok) {
-        throw new Error("No se pudieron cargar las recetas");
-      }
-
-      const data = await response.json();
-
-      recetas.value = data.results ?? [];
-    } catch (e) {
-      error.value = e.message;
+      recetas.value = recetasFeed;
+    } catch {
+      error.value = "No se pudieron cargar las recetas";
     } finally {
       cargandoRecetas.value = false;
     }
   }
 
- async function cargarRecetaPorId(id) {
-   if (!id) {
-     error.value = "El ID de la receta es obligatorio";
-     return;
-   }
+  async function cargarRecetaPorId(id) {
+    if (!id) {
+      error.value = "El ID de la receta es obligatorio";
+      return;
+    }
 
-   error.value = null;
+    cargandoReceta.value = true;
 
-   const recetaCacheada = recetasPorId.value[id];
+    error.value = null;
 
-   if (recetaCacheada) {
-     recetaActual.value = recetaCacheada;
-     console.log("la receta estaba cacheada");
-     
-     return;
-   }
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 300));
 
-   cargandoReceta.value = true;
+      const receta = recetasDetalle.find((receta) => receta.id === Number(id));
 
-   try {
-     const response = await fetch(
-       `${API_URL}/${id}/information?apiKey=${API_KEY}&language=es`,
-     );
+      if (!receta) {
+        throw new Error("Receta no encontrada");
+      }
 
-     if (!response.ok) {
-       throw new Error("No se pudo cargar la receta");
-     }
-
-     const data = await response.json();
-
-     recetasPorId.value[id] = data;
-
-     recetaActual.value = data;
-   } catch (e) {
-     error.value = e instanceof Error ? e.message : "Error desconocido";
-   } finally {
-     cargandoReceta.value = false;
-   }
- }
+      recetaActual.value = receta;
+    } catch (e) {
+      error.value = e instanceof Error ? e.message : "Error desconocido";
+    } finally {
+      cargandoReceta.value = false;
+    }
+  }
 
   function limpiarRecetaActual() {
     recetaActual.value = null;
