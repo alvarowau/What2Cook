@@ -5,21 +5,21 @@ import { useRecetaStore } from "@/stores/RecetaStore";
 const recetaStore = useRecetaStore();
 
 const ingredientes = ref([
-  { id: 1, nombre: "Pollo", value: "chicken", seleccionado: false, emoji: "🍗" },
-  { id: 2, nombre: "Arroz", value: "rice", seleccionado: false, emoji: "🍚" },
-  { id: 3, nombre: "Tomate", value: "tomato", seleccionado: false, emoji: "🍅" },
-  { id: 4, nombre: "Cebolla", value: "onion", seleccionado: false, emoji: "🧅" },
-  { id: 5, nombre: "Leche", value: "milk", seleccionado: false, emoji: "🥛" },
-  { id: 6, nombre: "Huevos", value: "eggs", seleccionado: false, emoji: "🥚" },
-  { id: 7, nombre: "Queso", value: "cheese", seleccionado: false, emoji: "🧀" },
-  { id: 8, nombre: "Patata", value: "potato", seleccionado: false, emoji: "🥔" },
-  { id: 9, nombre: "Salmón", value: "salmon", seleccionado: false, emoji: "🐟" },
-  { id: 10, nombre: "Zanahoria", value: "carrot", seleccionado: false, emoji: "🥕" },
-  { id: 11, nombre: "Pimiento", value: "bell pepper", seleccionado: false, emoji: "🫑" },
-  { id: 12, nombre: "Ajo", value: "garlic", seleccionado: false, emoji: "🧄" },
+  { id: 1, nombre: "Pollo", value: "pollo", seleccionado: false, emoji: "🍗" },
+  { id: 2, nombre: "Arroz", value: "arroz", seleccionado: false, emoji: "🍚" },
+  { id: 3, nombre: "Tomate", value: "tomate", seleccionado: false, emoji: "🍅" },
+  { id: 4, nombre: "Cebolla", value: "cebolla", seleccionado: false, emoji: "🧅" },
+  { id: 5, nombre: "Leche", value: "leche", seleccionado: false, emoji: "🥛" },
+  { id: 6, nombre: "Huevos", value: "huevos", seleccionado: false, emoji: "🥚" },
+  { id: 7, nombre: "Queso", value: "queso", seleccionado: false, emoji: "🧀" },
+  { id: 8, nombre: "Patata", value: "patata", seleccionado: false, emoji: "🥔" },
+  { id: 9, nombre: "Salmón", value: "salmón", seleccionado: false, emoji: "🐟" },
+  { id: 10, nombre: "Zanahoria", value: "zanahoria", seleccionado: false, emoji: "🥕" },
+  { id: 11, nombre: "Pimiento", value: "pimiento", seleccionado: false, emoji: "🫑" },
+  { id: 12, nombre: "Ajo", value: "ajo", seleccionado: false, emoji: "🧄" },
   { id: 13, nombre: "Pasta", value: "pasta", seleccionado: false, emoji: "🍝" },
-  { id: 14, nombre: "Limón", value: "lemon", seleccionado: false, emoji: "🍋" },
-  { id: 15, nombre: "Champiñones", value: "mushrooms", seleccionado: false, emoji: "🍄‍🟫" },
+  { id: 14, nombre: "Limón", value: "limón", seleccionado: false, emoji: "🍋" },
+  { id: 15, nombre: "Champiñones", value: "champiñones", seleccionado: false, emoji: "🍄‍🟫" },
 ]);
 
 function toggleIngrediente(ingrediente) {
